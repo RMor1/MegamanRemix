@@ -194,6 +194,10 @@ public class Control : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Explosion")) Damage();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("HitBox")) Damage();
+    }
     public void Damage()
     {
         if((Time.time - timer) > 2)
