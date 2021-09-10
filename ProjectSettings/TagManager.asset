@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Damage
-  - Bullet
-  - Explosion
-  - Ground
-  - Spike
-  - MovableObjects
-  - OnlyCollideWithMovableObjects
-  - HitBox
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - corrente
-  - Bullet
-  - Objects
-  - Particles
-  - OnlyCollidesWithMovableObjects
-  - MovableObjects
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -48,7 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: New Layer
-    uniqueID: 730976939
     locked: 0
