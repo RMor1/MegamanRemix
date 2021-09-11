@@ -54,21 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Prefab\PrefabsAi\AiVoadora.cs" />
-    <Compile Include="Assets\Sprites\Scripts\AracnoControl.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Barrel.cs" />
-    <Compile Include="Assets\Sprites\Scripts\CameraFollowOnDeath.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Control.cs" />
-    <Compile Include="Assets\Sprites\Scripts\CrabPistol.cs" />
-    <Compile Include="Assets\Sprites\Scripts\DamageZone.cs" />
-    <Compile Include="Assets\Sprites\Scripts\DealDamage.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Estalactite.cs" />
-    <Compile Include="Assets\Sprites\Scripts\HealthBarControler.cs" />
-    <Compile Include="Assets\Sprites\Scripts\IntroScript.cs" />
-    <Compile Include="Assets\Sprites\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Sprites\Scripts\MenuGame.cs" />
-    <Compile Include="Assets\Sprites\Scripts\MyCamera.cs" />
-    <Compile Include="Assets\Sprites\Scripts\ParallaxEffect.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Receiver.cs" />
+    <Compile Include="Assets\Scripts\Barrel.cs" />
+    <Compile Include="Assets\Scripts\CameraFollowOnDeath.cs" />
+    <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\DamageZone.cs" />
+    <Compile Include="Assets\Scripts\DealDamage.cs" />
+    <Compile Include="Assets\Scripts\Estalactite.cs" />
+    <Compile Include="Assets\Scripts\HealthBarControler.cs" />
+    <Compile Include="Assets\Scripts\ParallaxEffect.cs" />
+    <Compile Include="Assets\Scripts\Receiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
