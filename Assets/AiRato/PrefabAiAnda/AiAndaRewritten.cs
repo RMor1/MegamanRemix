@@ -15,6 +15,7 @@ public class AiAndaRewritten : MonoBehaviour
     private float lenght, height;
     private GameObject Aim;
     private Vector2 LastKnowPosition;
+    private int vidas=3;
     private enum AiTypeList
     {
         melee, ranged
@@ -64,6 +65,11 @@ public class AiAndaRewritten : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        if (vidas<=0)
+        {
+            Destroy(gameObject);
+        }
         if (TipoDeAI == AiTypeList.ranged)
         {
             //Angulo entre player e Inimigo
@@ -139,12 +145,18 @@ public class AiAndaRewritten : MonoBehaviour
     {
         if (AnimationName.Equals("AttackStart"))
         {
+            Aim.GetComponent<BoxCollider2D>().enabled = true;
             //hitbox turn on
         }
         else if (AnimationName.Equals("AttackEnd"))
         {
             //hitbox turn off 
+            Aim.GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<Animator>().SetBool("ISATTACKING", false);
         }
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        vidas--;
     }
 }

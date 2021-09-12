@@ -7,13 +7,13 @@ TextureImporter:
     second: Sprite-lacraiacuspe-Sheet_0
   - first:
       213: -4125611780317805555
-    second: Sprite-lacraiacuspe-Sheet_1
+    second: Sprite-lacraiacuspe-Sheet_0
   - first:
       213: 6386880107190049135
-    second: Sprite-lacraiacuspe-Sheet_2
+    second: Sprite-lacraiacuspe-Sheet_0
   - first:
       213: 8644079410099546309
-    second: Sprite-lacraiacuspe-Sheet_3
+    second: Sprite-lacraiacuspe-Sheet_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-lacraiacuspe-Sheet_0
+      name: Sprite-lacraiacuspe-Sheet_1
       rect:
         serializedVersion: 2
         x: 4
@@ -131,7 +131,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-lacraiacuspe-Sheet_1
+      name: Sprite-lacraiacuspe-Sheet_2
       rect:
         serializedVersion: 2
         x: 4
@@ -152,7 +152,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-lacraiacuspe-Sheet_2
+      name: Sprite-lacraiacuspe-Sheet_3
       rect:
         serializedVersion: 2
         x: 4
@@ -173,7 +173,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-lacraiacuspe-Sheet_3
+      name: Sprite-lacraiacuspe-Sheet_0
       rect:
         serializedVersion: 2
         x: 4
@@ -194,7 +194,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

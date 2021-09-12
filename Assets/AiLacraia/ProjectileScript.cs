@@ -24,6 +24,7 @@ public class ProjectileScript : MonoBehaviour
         }
         else if(collision.CompareTag(tagPlayer))
         {
+            collision.gameObject.GetComponent<Control>().vida--;
             Destroy(gameObject);
         }
     }

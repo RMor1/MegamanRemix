@@ -26,6 +26,7 @@ public class ControlRigV2 : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     private Transform firePoint;
     [SerializeField] private float shootCooldown;
+    public int vidas = 3;
     void Start()
     {
         if (GetComponentInChildren<Transform>().GetChild(0).transform.gameObject.transform.childCount > 0)
@@ -74,7 +75,7 @@ public class ControlRigV2 : MonoBehaviour
         {
             rigList[i] = rigParent.transform.GetChild(i).transform.gameObject;
         }
-        Player = GameObject.Find("Player");
+        Player = GameObject.FindGameObjectWithTag("Player");
         bodyBase = ChildList[0];
         Center = ChildList[0].transform.position;
         weight = rigList[0].GetComponent<DampedTransform>().weight;
@@ -107,7 +108,11 @@ public class ControlRigV2 : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Player = GameObject.Find("Player");
+        if(vidas <=0)
+        {
+            Destroy(GameObject.Find("AiLacraia"));
+        }
+        Player = GameObject.FindGameObjectWithTag("Player");
         float DistanceToPlayer;
         DistanceToPlayer = Vector2.Distance(Center, Player.transform.position);
         if (SpawnSequence == false)
