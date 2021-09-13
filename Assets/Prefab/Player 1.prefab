@@ -1364,7 +1364,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     mode: 1
-    timeMode: 2
+    timeMode: 0
     fps: 2
     frameOverTime:
       serializedVersion: 2
@@ -1377,17 +1377,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0.25237656
-          outSlope: 0.25237656
+          inSlope: 25.1529
+          outSlope: 25.1529
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 0.25237656
-          inSlope: 0.25237656
-          outSlope: 0.25237656
+          time: 0.039756846
+          value: 1
+          inSlope: 25.1529
+          outSlope: 25.1529
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1481,15 +1481,15 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -2345364887039131742, guid: fd1b562b852e70341957736d001729e0,
+    - sprite: {fileID: -2345364887039131742, guid: 1cc708262791a28498e34857c0fd890c,
         type: 3}
-    - sprite: {fileID: -1503424115255161084, guid: fd1b562b852e70341957736d001729e0,
+    - sprite: {fileID: -1503424115255161084, guid: 1cc708262791a28498e34857c0fd890c,
         type: 3}
-    - sprite: {fileID: -1861933304299062301, guid: fd1b562b852e70341957736d001729e0,
+    - sprite: {fileID: -1861933304299062301, guid: 1cc708262791a28498e34857c0fd890c,
         type: 3}
-    - sprite: {fileID: -785836750645991768, guid: fd1b562b852e70341957736d001729e0,
+    - sprite: {fileID: -785836750645991768, guid: 1cc708262791a28498e34857c0fd890c,
         type: 3}
-    - sprite: {fileID: -6480676506970284388, guid: fd1b562b852e70341957736d001729e0,
+    - sprite: {fileID: -6480676506970284388, guid: 1cc708262791a28498e34857c0fd890c,
         type: 3}
     flipU: 0
     flipV: 0
@@ -3742,7 +3742,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 1331
+      m_Bits: 17459
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4843,13 +4843,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -5092049721513924993, guid: fb18e78ce8d3f584bbb4a0efd724c34f,
+  m_Sprite: {fileID: -5092049721513924993, guid: bcb3374ef931fd24ea6b6fa1ef47dd1f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.08, y: 0.78}
+  m_Size: {x: 1.08, y: 0.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

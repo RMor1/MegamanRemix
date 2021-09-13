@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6528362792713257861}
   - component: {fileID: 6528362792713257860}
+  - component: {fileID: 742038740}
   m_Layer: 0
   m_Name: DamageHitBox
-  m_TagString: Untagged
+  m_TagString: HitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,13 +39,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6528362792713257862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009470105, y: -0.06081596}
+  m_Offset: {x: 0.028155327, y: -0.020295858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,8 +56,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7508619, y: 0.6058726}
+  m_Size: {x: 1.2428913, y: 1.0573831}
   m_EdgeRadius: 0
+--- !u!114 &742038740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528362792713257862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e3caad584fa294180a39e609eb76fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whenDamagedReturnToPoint: 0
+  returnPosition: {fileID: 0}
 --- !u!1 &6528362794388718009
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +102,7 @@ Transform:
   m_GameObject: {fileID: 6528362794388718009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.51, y: 4.28, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 6528362792713257861}
   m_Father: {fileID: 0}
@@ -157,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6528362794388717958}
-  MoveSpeed: 10
+  MoveSpeed: 2
   Comeco: {fileID: 0}
   QuantidadeDeIntermediarios: 3
   Intermediario1: {fileID: 0}
@@ -166,7 +181,7 @@ MonoBehaviour:
   Final: {fileID: 0}
   verRange: 1
   SeguirRange: 3
-  AtaqueRange: 2
+  AtaqueRange: 1.8
   "Detec\xE7\xE3oRange": 6
   Vida: 0
   TipoDeAI: 0
