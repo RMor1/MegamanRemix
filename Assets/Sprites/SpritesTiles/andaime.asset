@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: andaime
   m_EditorClassIdentifier: 
   m_Sprites:
-  - {fileID: 0}
+  - {fileID: -6560838776505732473, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
   - {fileID: 261244207946645663, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
   - {fileID: -6560838776505732473, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
   - {fileID: -6618537268380248854, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
