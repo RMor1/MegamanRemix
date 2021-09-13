@@ -1557,6 +1557,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9216666104770784907, guid: d97c9f063c532f54daaf86021314ef70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9216666104770784909, guid: d97c9f063c532f54daaf86021314ef70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1566,6 +1571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216666104775310869, guid: d97c9f063c532f54daaf86021314ef70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9216666104775310870, guid: d97c9f063c532f54daaf86021314ef70,
         type: 3}
@@ -1577,6 +1587,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 9216666105226252126, guid: d97c9f063c532f54daaf86021314ef70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9216666105226252127, guid: d97c9f063c532f54daaf86021314ef70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1586,6 +1601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216666105395471075, guid: d97c9f063c532f54daaf86021314ef70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9216666105395471076, guid: d97c9f063c532f54daaf86021314ef70,
         type: 3}
@@ -1656,6 +1676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MoveScript
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216666106617075725, guid: d97c9f063c532f54daaf86021314ef70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9216666106617075726, guid: d97c9f063c532f54daaf86021314ef70,
         type: 3}
@@ -7500,6 +7525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabRatoAi
       objectReference: {fileID: 0}
+    - target: {fileID: 922396682288281351, guid: a2a118cfaa68b8b40acdb8ab9f1b29f3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8361363776683979312, guid: a2a118cfaa68b8b40acdb8ab9f1b29f3,
         type: 3}
       propertyPath: rb
@@ -7513,7 +7543,7 @@ PrefabInstance:
     - target: {fileID: 8361363776683979312, guid: a2a118cfaa68b8b40acdb8ab9f1b29f3,
         type: 3}
       propertyPath: MoveSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8361363776683979312, guid: a2a118cfaa68b8b40acdb8ab9f1b29f3,
         type: 3}
@@ -29838,6 +29868,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 374984072771662210, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 374984072771662215, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
         type: 3}
       propertyPath: m_Layer
@@ -29848,15 +29883,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 374984073093258210, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 374984073093258215, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
         type: 3}
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 374984073335087088, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 374984073335087093, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 374984073919701795, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 374984073919701796, guid: 1e3d3c987f4d0eb45b8d224f2db9c44b,
         type: 3}
