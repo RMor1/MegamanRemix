@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EDC96B53-1F4D-007B-1106-4C5C05AD8D25}</ProjectGuid>
+    <ProjectGuid>{8017755C-8C6B-0201-A0CA-E81D6820D32D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,22 +53,21 @@
     <UnityVersion>2019.4.29f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\AiLacraia\ControlRigV2.cs" />
+    <Compile Include="Assets\AiLacraia\NoVelocity.cs" />
+    <Compile Include="Assets\AiLacraia\OnShot.cs" />
+    <Compile Include="Assets\AiLacraia\ProjectileScript.cs" />
+    <Compile Include="Assets\AiRato\PrefabAiAnda\AiAndaRewritten.cs" />
     <Compile Include="Assets\Prefab\PrefabsAi\AiVoadora.cs" />
-    <Compile Include="Assets\Sprites\Scripts\AracnoControl.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Barrel.cs" />
-    <Compile Include="Assets\Sprites\Scripts\CameraFollowOnDeath.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Control.cs" />
-    <Compile Include="Assets\Sprites\Scripts\CrabPistol.cs" />
-    <Compile Include="Assets\Sprites\Scripts\DamageZone.cs" />
-    <Compile Include="Assets\Sprites\Scripts\DealDamage.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Estalactite.cs" />
-    <Compile Include="Assets\Sprites\Scripts\HealthBarControler.cs" />
-    <Compile Include="Assets\Sprites\Scripts\IntroScript.cs" />
-    <Compile Include="Assets\Sprites\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Sprites\Scripts\MenuGame.cs" />
-    <Compile Include="Assets\Sprites\Scripts\MyCamera.cs" />
-    <Compile Include="Assets\Sprites\Scripts\ParallaxEffect.cs" />
-    <Compile Include="Assets\Sprites\Scripts\Receiver.cs" />
+    <Compile Include="Assets\Scripts\Barrel.cs" />
+    <Compile Include="Assets\Scripts\CameraFollowOnDeath.cs" />
+    <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\DamageZone.cs" />
+    <Compile Include="Assets\Scripts\DealDamage.cs" />
+    <Compile Include="Assets\Scripts\Estalactite.cs" />
+    <Compile Include="Assets\Scripts\HealthBarControler.cs" />
+    <Compile Include="Assets\Scripts\ParallaxEffect.cs" />
+    <Compile Include="Assets\Scripts\Receiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -262,6 +261,15 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.5\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.1.1\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -620,8 +628,14 @@
     <Reference Include="UnityEngine.Monetization">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
       <HintPath>Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll</HintPath>
@@ -634,6 +648,9 @@
     </Reference>
     <Reference Include="Purchasing.Common">
       <HintPath>Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
@@ -650,6 +667,9 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
@@ -664,6 +684,9 @@
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
@@ -686,14 +709,29 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
@@ -713,14 +751,23 @@
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -737,11 +784,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{0BBCBB1D-4A7B-156C-C13C-AF66170C4147}</Project>
+      <Project>{74257D0A-7EA2-E784-2D89-5986ED63EDC1}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{423006CE-2F24-5E2E-7691-7CDFA44B1DD9}</Project>
+      <Project>{40B5B24E-874A-A16D-3488-9D44F22BFF4C}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>

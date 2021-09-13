@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0BBCBB1D-4A7B-156C-C13C-AF66170C4147}</ProjectGuid>
+    <ProjectGuid>{74257D0A-7EA2-E784-2D89-5986ED63EDC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
@@ -273,20 +273,11 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="GitHub.Api.45">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll</HintPath>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="GitHub.Logging">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Unity.45">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.UnityShim">
-      <HintPath>Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll</HintPath>
-    </Reference>
-    <Reference Include="sfw.net">
-      <HintPath>Assets\Plugins\GitHub\Editor\sfw.net.dll</HintPath>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.5\Unity.Analytics.Editor.dll</HintPath>
@@ -296,6 +287,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.5\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.1.1\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.6.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
@@ -310,10 +304,16 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.6.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@7.3.1\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@7.7.1\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.29f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -690,7 +690,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{423006CE-2F24-5E2E-7691-7CDFA44B1DD9}</Project>
+      <Project>{40B5B24E-874A-A16D-3488-9D44F22BFF4C}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>
