@@ -32,3 +32,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.vs/MegamanRemix/v16/.suo
+Assembly-CSharp.csproj
+Library/ArtifactDB
+Library/SourceAssetDB
+Library/StateCache/Hierarchy/4c969a-mainStage.json
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
