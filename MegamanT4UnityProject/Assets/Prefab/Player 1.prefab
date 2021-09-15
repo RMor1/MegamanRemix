@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &927741016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927741017}
+  m_Layer: 2
+  m_Name: feetPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927741017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927741016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6234557937356533169}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6237630708543041329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,17 +1407,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 25.1529
-          outSlope: 25.1529
+          inSlope: 1.6302488
+          outSlope: 1.6302488
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.039756846
+          time: 0.6134033
           value: 1
-          inSlope: 25.1529
-          outSlope: 25.1529
+          inSlope: 1.6302488
+          outSlope: 1.6302488
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1477,7 +1507,7 @@ ParticleSystem:
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 100000
+    cycles: 1
     uvChannelMask: -1
     rowMode: 1
     sprites:
@@ -4780,7 +4810,7 @@ GameObject:
   - component: {fileID: 6081616576632366635}
   - component: {fileID: 6207286873201322449}
   - component: {fileID: 6324865732714017027}
-  - component: {fileID: 6269821540436389305}
+  - component: {fileID: 8207549230119893708}
   - component: {fileID: 6227428657800655611}
   m_Layer: 2
   m_Name: Player 1
@@ -4801,6 +4831,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 6234256237612592719}
+  - {fileID: 927741017}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4895,7 +4926,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6269821540436389305
+--- !u!114 &8207549230119893708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4904,7 +4935,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6238077196419189995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61782caa48f696d458c95daa6e99c7e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 640526686c8cec44d891ac823fedf6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anima: {fileID: 6324865732714017027}
@@ -4915,6 +4946,10 @@ MonoBehaviour:
   ShootCooldown: 0
   vida: 5
   playerprefab: {fileID: 6238077196419189995}
+  JumpSpeed: 4.7
+  jumpTime: 0.6
+  feetPos: {fileID: 927741017}
+  checkRadius: 0.3
 --- !u!70 &6227428657800655611
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class HealthBarControler : MonoBehaviour
 
     void Update()
     {
-        playerHp = GameObject.FindGameObjectWithTag("Player").GetComponent<Control>().vida;
+        playerHp = GameObject.FindGameObjectWithTag("Player").GetComponent<ControlV2>().vida;
         switch(playerHp)
         {
             case 1:
