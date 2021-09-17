@@ -8,7 +8,6 @@ public class ControlV2 : MonoBehaviour
     float xmov;
     public Rigidbody2D rdb;
     public ParticleSystem fire;
-    float LastPosition;
     [Range(0, 20)] public float MoveSpeed = 20;
     [Range(1f, 1.2f)] public float JumpForce = 1;
     private float LastTime;
@@ -18,13 +17,14 @@ public class ControlV2 : MonoBehaviour
     public GameObject playerprefab;
     private GameObject respawn;
 
-    [Range(0, 50),SerializeField] private float JumpSpeed;
+    [Range(0, 50), SerializeField] private float JumpSpeed;
     private float JumpTimeCounter;
-    [SerializeField]public float jumpTime;
+    [SerializeField] public float jumpTime;
     private RaycastHit2D[] GroundCheck;
     private bool isJumping;
-    [SerializeField]private Transform feetPos;
-    [SerializeField]private float checkRadius;
+    [SerializeField] private Transform feetPos;
+    [SerializeField] private float checkRadius;
+    bool lastisGrounded;
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(feetPos.position, checkRadius);
@@ -43,16 +43,30 @@ public class ControlV2 : MonoBehaviour
         }
         xmov = Input.GetAxis("Horizontal");
         bool isGrounded = false;
-        GroundCheck = Physics2D.CircleCastAll(feetPos.position, checkRadius,new Vector2(0,0));
-        foreach(RaycastHit2D go in GroundCheck)
+        GroundCheck = Physics2D.CircleCastAll(feetPos.position, checkRadius, new Vector2(0, 0));
+        foreach (RaycastHit2D go in GroundCheck)
         {
             if (go.collider.CompareTag("Ground")) isGrounded = true;
         }
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && Mathf.Round(rdb.velocity.y)==0)
+        if (isGrounded == true & lastisGrounded == false)
         {
+            anima.SetTrigger("HitGround");
+        }
+        else if (isGrounded == true & lastisGrounded == true)
+        {
+            anima.SetTrigger("HitGround");
+        }
+        else
+        {
+            anima.ResetTrigger("HitGround");
+        }
+        lastisGrounded = isGrounded;
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && Mathf.Round(rdb.velocity.y) == 0)
+        {
+            anima.SetTrigger("Jump");
             isJumping = true;
             JumpTimeCounter = jumpTime;
-            rdb.velocity = new Vector2(rdb.velocity.x,Vector2.up.y * JumpSpeed);
+            rdb.velocity = new Vector2(rdb.velocity.x, Vector2.up.y * JumpSpeed);
         }
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
@@ -70,6 +84,14 @@ public class ControlV2 : MonoBehaviour
         {
             isJumping = false;
         }
+        if(Mathf.Round(rdb.velocity.y)<0)
+        {
+            anima.SetBool("Falling",true);
+        }
+        else
+        {
+            anima.SetBool("Falling",false);
+        }
         anima.SetBool("Fire", false);
         LastTime += Time.fixedDeltaTime;
         if (Input.GetButtonDown("Fire1") && LastTime > ShootCooldown)
@@ -86,42 +108,31 @@ public class ControlV2 : MonoBehaviour
         Reverser();
         anima.SetFloat("Velocity", Mathf.Abs(xmov));
         rdb.AddForce(new Vector2(xmov * MoveSpeed / (rdb.velocity.magnitude + 1), 0));
-        RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position, Vector2.down);
-            anima.SetFloat("Height", hit.distance);
         if (anima.GetCurrentAnimatorStateInfo(0).IsName("JumpFly"))
         {
-            //if(anima.GetFloat("Height")-LastPosition<0)
-            if (((anima.GetFloat("Height") - LastPosition) / Time.fixedDeltaTime) < 0)
+            float ZRotation;
+            ZRotation = Mathf.Abs(rdb.velocity.y) / (Mathf.Abs(rdb.velocity.x * 4) + Mathf.Abs(rdb.velocity.y)) * -90;
+            if (-90 < ZRotation & ZRotation <= 0)
             {
-                if (((anima.GetFloat("Height") - LastPosition) / Time.fixedDeltaTime) * 20 > -90)
-                {
-                    transform.Rotate(0, 0, (((anima.GetFloat("Height") - LastPosition) / Time.fixedDeltaTime) * 20) - transform.eulerAngles.z, Space.Self);
-                }
-                else 
-                {
-                    transform.Rotate(0, 0,-90- transform.eulerAngles.z, Space.Self);
-                }
+                ZRotation = ZRotation - anima.gameObject.transform.eulerAngles.z;
+                if (ZRotation == float.NaN) ZRotation = 0;
+                anima.gameObject.transform.Rotate(0, 0, ZRotation);
             }
-            // transform.Rotate(0,0, (DeltaPosition/Time.fixedDeltaTime), Space.Self);
-            LastPosition = anima.GetFloat("Height");
-            //transform.Rotate(0, 0, 0, Space.Self);
         }
         else
         {
-            transform.Rotate(-transform.eulerAngles.x, 0, -transform.eulerAngles.z, Space.Self);
+            anima.gameObject.transform.Rotate(-anima.gameObject.transform.eulerAngles.x, 0, -anima.gameObject.transform.eulerAngles.z, Space.Self);
         }
-
     }
     void Reverser()
     {
         if (xmov > 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            anima.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (xmov < 0)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            anima.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
     }
@@ -129,11 +140,11 @@ public class ControlV2 : MonoBehaviour
     {
         if (rdb.velocity.x > 0.1f)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            anima.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (rdb.velocity.x < 0.1f)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            anima.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
     }

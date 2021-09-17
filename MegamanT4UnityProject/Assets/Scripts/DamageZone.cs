@@ -20,7 +20,7 @@ public class DamageZone : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            player.GetComponent<Control>().Damage();
+            player.GetComponent<ControlV2>().Damage();
             if(whenDamagedReturnToPoint==true)
             {
                 player.transform.position = returnPosition.transform.position;
