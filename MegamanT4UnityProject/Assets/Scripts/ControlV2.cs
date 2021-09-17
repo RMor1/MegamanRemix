@@ -128,11 +128,11 @@ public class ControlV2 : MonoBehaviour
     {
         if (xmov > 0)
         {
-            anima.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (xmov < 0)
         {
-            anima.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
     }
@@ -140,11 +140,12 @@ public class ControlV2 : MonoBehaviour
     {
         if (rdb.velocity.x > 0.1f)
         {
-            anima.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
         }
         if (rdb.velocity.x < 0.1f)
         {
-            anima.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
     }
