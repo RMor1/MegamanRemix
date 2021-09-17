@@ -84,13 +84,13 @@ public class ControlV2 : MonoBehaviour
         {
             isJumping = false;
         }
-        if(Mathf.Round(rdb.velocity.y)<0)
+        if (Mathf.Round(rdb.velocity.y) < 0)
         {
-            anima.SetBool("Falling",true);
+            anima.SetBool("Falling", true);
         }
         else
         {
-            anima.SetBool("Falling",false);
+            anima.SetBool("Falling", false);
         }
         anima.SetBool("Fire", false);
         LastTime += Time.fixedDeltaTime;
