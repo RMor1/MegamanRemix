@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: e719f169d35e5664b907b65efe711723
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 60189345368900614
+    second: Sprite-estalactite_0
+  - first:
+      213: 4201411166723263563
+    second: Sprite-estalactite_1
+  - first:
+      213: -2612216532834099884
+    second: Sprite-estalactite_2
+  - first:
+      213: -6946332357181263255
+    second: Sprite-estalactite_3
+  - first:
+      213: -883892390603049019
+    second: Sprite-estalactite_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +124,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sprite-estalactite_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6040af504e5d5d000800000000000000
+      internalID: 60189345368900614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 91
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c46e332396e4a30800000000000000
+      internalID: 4201411166723263563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 77
+        width: 17
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d550c47ea8fbbd0800000000000000
+      internalID: -2612216532834099884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 105
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962b86e368ba99f90800000000000000
+      internalID: -6946332357181263255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 81
+        width: 12
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c73f66cd88cbb3f0800000000000000
+      internalID: -883892390603049019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

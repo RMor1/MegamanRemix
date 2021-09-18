@@ -1,34 +1,22 @@
 fileFormatVersion: 2
-guid: b98856adaff742d498ecd3aee928a352
+guid: f91f1123d9e27474799a32e6d19cd3bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2266098959712040629
-    second: Sprite-humanomedo-Sheet_0
+      213: -8669939500066870002
+    second: Sprite-estalactite_quebrada_0
   - first:
-      213: -3111055533052728980
-    second: Sprite-humanomedo-Sheet_1
+      213: -2053737158081849520
+    second: Sprite-estalactite_quebrada_1
   - first:
-      213: -1149414201606531110
-    second: Sprite-humanomedo-Sheet_1
+      213: -5554331723821931181
+    second: Sprite-estalactite_quebrada_2
   - first:
-      213: 6287561913068082581
-    second: Sprite-humanomedo-Sheet_3
+      213: 5003576089099183950
+    second: Sprite-estalactite_quebrada_3
   - first:
-      213: 2768231222524565741
-    second: Sprite-humanomedo-Sheet_3
-  - first:
-      213: 4313650979916022526
-    second: Sprite-humanomedo-Sheet_3
-  - first:
-      213: -111214910727756242
-    second: Sprite-humanomedo-Sheet_1
-  - first:
-      213: 2571443446549422663
-    second: Sprite-humanomedo-Sheet_7
-  - first:
-      213: -425832299607423929
-    second: Sprite-humanomedo-Sheet_8
+      213: 6504681230330244409
+    second: Sprite-estalactite_quebrada_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +99,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +111,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -138,127 +126,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_0
+      name: Sprite-estalactite_quebrada_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 7
-        width: 24
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 5
+        y: 66
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b494b70a0033d80e0800000000000000
-      internalID: -2266098959712040629
+      spriteID: e0de262c5ff2ea780800000000000000
+      internalID: -8669939500066870002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_1
+      name: Sprite-estalactite_quebrada_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 91
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057d2869fe8af73e0800000000000000
+      internalID: -2053737158081849520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_quebrada_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 77
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35529eca9bc0be2b0800000000000000
+      internalID: -5554331723821931181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_quebrada_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 105
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47256561f5407540800000000000000
+      internalID: 5003576089099183950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-estalactite_quebrada_4
       rect:
         serializedVersion: 2
         x: 108
-        y: 7
-        width: 25
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 81
+        width: 11
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c69e0ebc97f43d4d0800000000000000
-      internalID: -3111055533052728980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 7
-        width: 26
-        height: 60
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad7147d9fd57c00f0800000000000000
-      internalID: -1149414201606531110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 4
-        width: 32
-        height: 62
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 595d2bb3f38e14750800000000000000
-      internalID: 6287561913068082581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 2
-        width: 37
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de8d8b251abba6620800000000000000
-      internalID: 2768231222524565741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-humanomedo-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 421
-        y: 1
-        width: 40
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef209e626ba2ddb30800000000000000
-      internalID: 4313650979916022526
+      spriteID: 93d2cfe9d15454a50800000000000000
+      internalID: 6504681230330244409
       vertices: []
       indices: 
       edges: []
