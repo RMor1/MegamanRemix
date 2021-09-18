@@ -257,7 +257,7 @@ public class ControlRigV3 : MonoBehaviour
                     {
                         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
                         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                        rb.AddForce(firePoint.right * -6, ForceMode2D.Impulse);
+                        rb.AddForce(firePoint.right * -1*6, ForceMode2D.Impulse);
                         delay = 0;
                     }
                 }
