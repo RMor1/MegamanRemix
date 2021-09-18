@@ -10,8 +10,6 @@ public class controleNPC : MonoBehaviour
     private int MovingDirection = 1;
     private float lenght, height;
 
-    // Start is called before the first frame update
-
     private void OnDrawGizmos()
     {
         if (verGizmos == true)
@@ -26,8 +24,6 @@ public class controleNPC : MonoBehaviour
         lenght = GetComponent<SpriteRenderer>().bounds.size.x;
         height = GetComponent<SpriteRenderer>().bounds.size.y;
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         #region

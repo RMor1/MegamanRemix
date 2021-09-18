@@ -6,6 +6,6 @@ public class OnShot : MonoBehaviour
 {
     private void OnParticleCollision(GameObject other)
     {
-        GameObject.Find("RigController").GetComponent<ControlRigV2>().vidas--;
+        GameObject.Find("RigController").GetComponent<ControlRigV3>().vida--;
     }
 }
