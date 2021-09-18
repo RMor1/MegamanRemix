@@ -46,7 +46,6 @@ public class controleNPC : MonoBehaviour
             Vira();
         }
         #endregion
-
         AnimationSideCorrect();
     }
     void Vira()

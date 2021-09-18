@@ -174,6 +174,11 @@ public class ControlRigV3 : MonoBehaviour
                 {
                     holePos++;
                     vida = maxHp;
+                    foreach(GameObject go in rigList)
+                    {
+                        go.GetComponent<DampedTransform>().weight = weight;
+                    }
+                    bodyBase = ChildList[0];
                     bodyBase.GetComponent<Rigidbody2D>().MovePosition(holes[holePos].transform.position);
                     ChangeCenter(holePos);
                     SpawnAction = 0;
@@ -275,8 +280,6 @@ public class ControlRigV3 : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log(Vector2.Distance(bodyBase.transform.position, Center));
-                                Debug.Log(sizes.x);
                                 SpawnAction = 1;
                             }
                             break;
