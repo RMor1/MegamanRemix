@@ -30,15 +30,13 @@ public class ControlRigV3 : MonoBehaviour
     private int maxHp;
     private bool ExitSequence=false;
     private Vector2 sizes;
-    private enum enemyTypeList
-    {
-        miniBoss,bossFinal
-    }
-    [SerializeField] enemyTypeList enemyType;
     [Range(0, 5)][SerializeField] private int holeAmount;
     [SerializeField] private GameObject hole0, hole1, hole2, hole3, hole4, hole5;
     private int holePos=0;
     private GameObject[] holes;
+
+    private GameObject npc0;
+    [SerializeField] private bool cutscene; 
     void Start()
     {
         maxHp = vida;
@@ -129,6 +127,7 @@ public class ControlRigV3 : MonoBehaviour
         }
         firePoint = ChildList[ChildCount].GetComponentInChildren<Transform>();
         sizes = new Vector2(bodyBase.GetComponent<SpriteRenderer>().bounds.size.x, bodyBase.GetComponent<SpriteRenderer>().bounds.size.y);
+        npc0 = GameObject.Find("npc0");
     }
     private void OnDrawGizmos()
     {
@@ -307,8 +306,14 @@ public class ControlRigV3 : MonoBehaviour
             }
         }
         Vector2 lookdir;
-        //switch(holeAmount-holePos)
-        lookdir = new Vector2(Player.transform.position.x, Player.transform.position.y) - bodyBase.GetComponent<Rigidbody2D>().position;
+        if(cutscene)
+        {
+            lookdir = new Vector2(npc0.transform.position.x, npc0.transform.position.y) - bodyBase.GetComponent<Rigidbody2D>().position;
+        }
+        else
+        {
+            lookdir = new Vector2(Player.transform.position.x, Player.transform.position.y) - bodyBase.GetComponent<Rigidbody2D>().position;
+        }
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 180;
         if (bodyBase.GetComponent<Rigidbody2D>().rotation != angle)
         {
@@ -352,9 +357,5 @@ public class ControlRigV3 : MonoBehaviour
     void ChangeCenter(int holeToGo)
     {
         Center = holes[holeToGo].transform.position;
-    }
-    void EnterHoleAnimation()
-    {
-
     }
 }
