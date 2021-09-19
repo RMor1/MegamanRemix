@@ -11,11 +11,13 @@ public class CutsceneNPCScript : MonoBehaviour
     Animator animator;
     void Start()
     {
+        
         fixedJumpTime = jumptime;
         rb = GetComponent<Rigidbody2D>();
         lenght = GetComponent<SpriteRenderer>().bounds.size.x;
         height = GetComponent<SpriteRenderer>().bounds.size.y;
         animator = GetComponent<Animator>();
+        animator.SetTrigger("TriggerCutscene");
     }
     private void OnDrawGizmos()
     {
@@ -23,7 +25,7 @@ public class CutsceneNPCScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("MineradorAndando")) rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MineradorAndando")) rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
         RaycastHit2D[] frontHit = Physics2D.LinecastAll(new Vector2(transform.position.x - lenght / 2, transform.position.y + height / 2), new Vector2(transform.position.x - lenght * 3, transform.position.y + height / 2));
         foreach (RaycastHit2D go in frontHit)
         {

@@ -5,8 +5,13 @@ using UnityEngine.Playables;
 
 public class controlePreBoss : MonoBehaviour
 {
-    public GameObject Player1;
-    public GameObject diretorPreBoss;
+    private GameObject Player1;
+    private GameObject diretorPreBoss;
+    private void Start()
+    {
+        Player1 = GameObject.Find("Player1");
+        diretorPreBoss = GameObject.Find("diretorPreBoss");
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
