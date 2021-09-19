@@ -32,11 +32,11 @@ public class ControlRigV3 : MonoBehaviour
     private Vector2 sizes;
     [Range(0, 5)][SerializeField] private int holeAmount;
     [SerializeField] private GameObject hole0, hole1, hole2, hole3, hole4, hole5;
-    private int holePos=0;
+    [System.NonSerialized] public int holePos=0;
     private GameObject[] holes;
 
     private GameObject npc0;
-    [SerializeField] private bool cutscene; 
+    public bool cutscene; 
     void Start()
     {
         maxHp = vida;
