@@ -90,20 +90,29 @@ public class AiAndaRewritten : MonoBehaviour
             Aim.transform.position = transform.position;
         }
         rb.velocity = new Vector3(0, 0, 0);
+        bool isThereGround = false;
+        bool isThereWall = false;
+        RaycastHit2D[] CheckList;
         switch (Action)
         {
-            case 2:
-                break;
+
             case 1:
                 if (Player.transform.position.x - transform.position.x > 0) MovingDirection = 1;
                 else if(Player.transform.position.x - transform.position.x < 0) MovingDirection = 0;
-                Move();
+                if (MovingDirection == 1) CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x + lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
+                else CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x - lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
+                foreach (RaycastHit2D ObjHit in CheckList)
+                {
+                    if (ObjHit.collider.CompareTag("Ground")) isThereGround = true;
+                    else if (ObjHit.collider.CompareTag("Wall")) isThereWall = true;
+                }
+                if (isThereGround == true & isThereWall == false)
+                {
+                    Move();
+                }
                 break;
             case 0:
                 #region
-                bool isThereGround = false;
-                bool isThereWall = false;
-                RaycastHit2D[] CheckList;
                 if (MovingDirection==1) CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x + lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
                 else CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x - lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
                 foreach (RaycastHit2D ObjHit in CheckList)

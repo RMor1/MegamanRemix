@@ -86,7 +86,6 @@ public class controleNPC : MonoBehaviour
         if(function=="EndMedo")
         {
             inFear = false;
-            Debug.Log("a");
         }
     }
 }
