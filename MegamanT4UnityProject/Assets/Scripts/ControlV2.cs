@@ -15,7 +15,6 @@ public class ControlV2 : MonoBehaviour
     [Range(0, 5)] public int vida;
     private float timer;
     public GameObject playerprefab;
-    private GameObject respawn;
 
     [Range(0, 50), SerializeField] private float JumpSpeed;
     private float JumpTimeCounter;
@@ -33,20 +32,22 @@ public class ControlV2 : MonoBehaviour
     }
     void Start()
     {
-        respawn = GameObject.Find("Respawn");
     }
     void Update()
     {
         if (vida <= 0)
         {
             vida = 5;
+            GameObject respawn = GameObject.Find("Respawn");
             Instantiate(playerprefab, respawn.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if(onCutscene==false)
+        if (onCutscene == false)
         {
             xmov = Input.GetAxis("Horizontal");
         }
+        else
+            xmov = 0;
         bool isGrounded = false;
         GroundCheck = Physics2D.CircleCastAll(feetPos.position, checkRadius, new Vector2(0, 0));
         foreach (RaycastHit2D go in GroundCheck)
