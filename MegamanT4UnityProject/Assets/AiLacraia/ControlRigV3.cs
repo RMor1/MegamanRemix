@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.Playables;
 
 public class ControlRigV3 : MonoBehaviour
 {
@@ -190,6 +191,10 @@ public class ControlRigV3 : MonoBehaviour
                 else
                 {
                     //foge e depois se apaga
+                    GameObject.Find("npc0").transform.position = new Vector3(231.27f, 63.69f, 0);
+                    PlayableDirector pd = GameObject.Find("diretorPosBoss").GetComponent<PlayableDirector>();
+                    if (pd != null)
+                        pd.Play();
                     Destroy(transform.parent.gameObject);
                 }
             }
