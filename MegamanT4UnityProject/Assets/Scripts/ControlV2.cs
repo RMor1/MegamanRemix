@@ -25,6 +25,8 @@ public class ControlV2 : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private float checkRadius;
     bool lastisGrounded;
+
+    [SerializeField] bool onCutscene;
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(feetPos.position, checkRadius);
@@ -41,7 +43,10 @@ public class ControlV2 : MonoBehaviour
             Instantiate(playerprefab, respawn.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        xmov = Input.GetAxis("Horizontal");
+        if(onCutscene==false)
+        {
+            xmov = Input.GetAxis("Horizontal");
+        }
         bool isGrounded = false;
         GroundCheck = Physics2D.CircleCastAll(feetPos.position, checkRadius, new Vector2(0, 0));
         foreach (RaycastHit2D go in GroundCheck)
@@ -61,28 +66,31 @@ public class ControlV2 : MonoBehaviour
             anima.ResetTrigger("HitGround");
         }
         lastisGrounded = isGrounded;
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && Mathf.Round(rdb.velocity.y) == 0)
+        if(onCutscene==false)
         {
-            anima.SetTrigger("Jump");
-            isJumping = true;
-            JumpTimeCounter = jumpTime;
-            rdb.velocity = new Vector2(rdb.velocity.x, Vector2.up.y * JumpSpeed);
-        }
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
-            if (JumpTimeCounter > 0)
+            if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && Mathf.Round(rdb.velocity.y) == 0)
             {
+                anima.SetTrigger("Jump");
+                isJumping = true;
+                JumpTimeCounter = jumpTime;
                 rdb.velocity = new Vector2(rdb.velocity.x, Vector2.up.y * JumpSpeed);
-                JumpTimeCounter -= Time.deltaTime;
             }
-            else
+            if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            {
+                if (JumpTimeCounter > 0)
+                {
+                    rdb.velocity = new Vector2(rdb.velocity.x, Vector2.up.y * JumpSpeed);
+                    JumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
         }
         if (Mathf.Round(rdb.velocity.y) < 0)
         {
@@ -94,7 +102,7 @@ public class ControlV2 : MonoBehaviour
         }
         anima.SetBool("Fire", false);
         LastTime += Time.fixedDeltaTime;
-        if (Input.GetButtonDown("Fire1") && LastTime > ShootCooldown)
+        if (Input.GetButtonDown("Fire1") && LastTime > ShootCooldown && onCutscene==false)
         {
             fire.Emit(1);
             anima.SetBool("Fire", true);
@@ -159,7 +167,7 @@ public class ControlV2 : MonoBehaviour
     }
     public void Damage()
     {
-        if ((Time.time - timer) > 2)
+        if ((Time.time - timer) > 2 && onCutscene==false)
         {
             timer = Time.time;
             vida--;

@@ -9,6 +9,8 @@ public class controleNPC : MonoBehaviour
     [SerializeField] private bool verGizmos = false;
     private int MovingDirection = 1;
     private float lenght, height;
+    private float moveDistance;[SerializeField] float fearAfterDistance;
+    bool inFear;
 
     private void OnDrawGizmos()
     {
@@ -26,27 +28,34 @@ public class controleNPC : MonoBehaviour
     }
     void FixedUpdate()
     {
-        #region
-        bool isThereGround = false;
-        bool isThereWall = false;
-        RaycastHit2D[] CheckList;
-        if (MovingDirection == 1) CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x + lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
-        else CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x - lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
-        foreach (RaycastHit2D ObjHit in CheckList)
+        if (moveDistance > fearAfterDistance)
         {
-            if (ObjHit.collider.CompareTag("Ground")) isThereGround = true;
-            else if (ObjHit.collider.CompareTag("Wall")) isThereWall = true;
+            GetComponent<Animator>().SetTrigger("TriggerMedo");
+            inFear = true;
+            moveDistance = 0;
         }
-        if (isThereGround == true & isThereWall == false)
+        else if (inFear==false)
         {
-            Move();
+            bool isThereGround = false;
+            bool isThereWall = false;
+            RaycastHit2D[] CheckList;
+            if (MovingDirection == 1) CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x + lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
+            else CheckList = Physics2D.BoxCastAll(new Vector3(transform.position.x - lenght, transform.position.y), new Vector2(lenght, height + 0.5f), 0f, new Vector2(0, 0));
+            foreach (RaycastHit2D ObjHit in CheckList)
+            {
+                if (ObjHit.collider.CompareTag("Ground")) isThereGround = true;
+                else if (ObjHit.collider.CompareTag("Wall")) isThereWall = true;
+            }
+            if (isThereGround == true & isThereWall == false)
+            {
+                Move();
+            }
+            else
+            {
+                Vira();
+            }
+            AnimationSideCorrect();
         }
-        else
-        {
-            Vira();
-        }
-        #endregion
-        AnimationSideCorrect();
     }
     void Vira()
     {
@@ -62,7 +71,22 @@ public class controleNPC : MonoBehaviour
     }
     void Move()
     {
-        if (MovingDirection == 1) rb.MovePosition(transform.position + new Vector3(1, 0, 0) * MoveSpeed * Time.fixedDeltaTime);
-        else rb.MovePosition(transform.position + new Vector3(-1, 0, 0) * MoveSpeed * Time.fixedDeltaTime);
+        if (MovingDirection == 1)
+        {
+            rb.MovePosition(transform.position + new Vector3(1, 0, 0) * MoveSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            rb.MovePosition(transform.position + new Vector3(-1, 0, 0) * MoveSpeed * Time.fixedDeltaTime);
+        }
+        moveDistance += MoveSpeed * Time.fixedDeltaTime;
+    }
+    public void AnimationEvent(string function)
+    {
+        if(function=="EndMedo")
+        {
+            inFear = false;
+            Debug.Log("a");
+        }
     }
 }
