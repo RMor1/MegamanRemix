@@ -187,7 +187,12 @@ public class ControlRigV3 : MonoBehaviour
                     detected = false;
                     ExitSequence = false;
                     delay = 0;
-                }
+                    if (holeAmount == holePos)
+                        {PlayableDirector pd = GameObject.Find("diretorFocoBoss").GetComponent<PlayableDirector>();
+                        if (pd != null)
+                            pd.Play();
+                        }
+                    }
                 else
                 {
                     //foge e depois se apaga

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: andaime
   m_EditorClassIdentifier: 
   m_Sprites:
-  - {fileID: -6560838776505732473, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
-  - {fileID: 261244207946645663, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
-  - {fileID: -6560838776505732473, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
-  - {fileID: -6618537268380248854, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
-  - {fileID: 3006125348164291287, guid: ea0f55a1b93acbc45bb796a899a0d64f, type: 3}
+  - {fileID: 5211795083526135895, guid: 49a273f5ded6bd44986e8f78fd5f2028, type: 3}
+  - {fileID: 3148296504863506663, guid: 49a273f5ded6bd44986e8f78fd5f2028, type: 3}
+  - {fileID: 5211795083526135895, guid: 49a273f5ded6bd44986e8f78fd5f2028, type: 3}
+  - {fileID: -1136572503345154522, guid: 49a273f5ded6bd44986e8f78fd5f2028, type: 3}
+  - {fileID: 7652135465736703371, guid: 49a273f5ded6bd44986e8f78fd5f2028, type: 3}

@@ -9,6 +9,8 @@ public class Barrel : MonoBehaviour
     public ParticleSystem explosion;
     Renderer rend;
     GameObject Respawn;
+    [SerializeField]
+    private bool respawn;
     // Use this for initialization
     void Start()
     {
@@ -26,7 +28,7 @@ public class Barrel : MonoBehaviour
         {
             if (!explosion.IsAlive())
             {
-                if (GameObject.Find("Test Explosion Prop"))
+                if (GameObject.Find("Test Explosion Prop") && respawn == true)
                 {
                     Instantiate(gameObject, Respawn.transform.position, Quaternion.identity);
                 }
