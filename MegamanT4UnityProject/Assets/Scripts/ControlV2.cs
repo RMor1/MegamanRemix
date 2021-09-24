@@ -4,28 +4,38 @@ using UnityEngine;
 
 public class ControlV2 : MonoBehaviour
 {
+    [Header("Segmentos")]
     public Animator anima;
     float xmov;
     public Rigidbody2D rdb;
     public ParticleSystem fire;
+    public GameObject playerprefab;
+
+
+    [Header("Movimentação e Atributos")]
     [Range(0, 20)] public float MoveSpeed = 20;
     [Range(1f, 1.2f)] public float JumpForce = 1;
     private float LastTime;
     public float ShootCooldown;
     [Range(0, 5)] public int vida;
     private float timer;
-    public GameObject playerprefab;
-
     [Range(0, 50), SerializeField] private float JumpSpeed;
-    private float JumpTimeCounter;
     [SerializeField] public float jumpTime;
+    private float JumpTimeCounter;
     private RaycastHit2D[] GroundCheck;
     private bool isJumping;
+
+    [Header("Jump Configs")]
     [SerializeField] private Transform feetPos;
     [SerializeField] private float checkRadius;
     bool lastisGrounded;
 
+    [Header("Cutscenes")]
     [SerializeField] bool onCutscene;
+
+    [Header("Debuffs")]
+    [SerializeField] bool isSlowed;
+    [SerializeField] private float slowAmountPercent;
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(feetPos.position, checkRadius);
@@ -116,7 +126,9 @@ public class ControlV2 : MonoBehaviour
     {
         Reverser();
         anima.SetFloat("Velocity", Mathf.Abs(xmov));
-        rdb.AddForce(new Vector2(xmov * MoveSpeed / (rdb.velocity.magnitude + 1), 0));
+        float playerVelocity = xmov * MoveSpeed / (rdb.velocity.magnitude + 1);
+        if(!isSlowed) rdb.AddForce(new Vector2(playerVelocity, 0));
+        else rdb.AddForce(new Vector2(playerVelocity- playerVelocity*slowAmountPercent/100, 0));
         if (anima.GetCurrentAnimatorStateInfo(0).IsName("JumpFly"))
         {
             float ZRotation;
