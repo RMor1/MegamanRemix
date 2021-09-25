@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - HitBox
   - Wall
+  - deSpawn
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - AI
   - Ground
   - NotCollideWPlayer
-  - 
+  - Esteira
   - 
   - 
   - 
