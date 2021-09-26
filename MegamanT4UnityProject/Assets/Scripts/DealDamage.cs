@@ -16,7 +16,7 @@ public class DealDamage : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Control>().Damage();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<ControlV2>().Damage();
             Destroy(gameObject);
         }
         else if (collision.collider.CompareTag("Ground"))

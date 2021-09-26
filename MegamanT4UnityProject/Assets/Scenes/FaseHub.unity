@@ -1405,7 +1405,7 @@ Transform:
   m_Children:
   - {fileID: 859194844}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186982595
 GameObject:
@@ -2890,6 +2890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207549230119893708, guid: 0e1c12ba12d685d4caa2e410185e872c,
+        type: 3}
+      propertyPath: slowAmountPercent
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1c12ba12d685d4caa2e410185e872c, type: 3}
@@ -11379,7 +11384,7 @@ PrefabInstance:
     - target: {fileID: 4847297450194524334, guid: 8a9c192195f272047a9d5d0951807662,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4847297450194524334, guid: 8a9c192195f272047a9d5d0951807662,
         type: 3}
@@ -60581,7 +60586,7 @@ Transform:
   - {fileID: 966738622}
   - {fileID: 909321}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420506423
 GameObject:
@@ -62650,7 +62655,7 @@ PrefabInstance:
     - target: {fileID: 1219811697136357576, guid: f820c9782aefaf94cb2a6692d872f557,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1219811697136357576, guid: f820c9782aefaf94cb2a6692d872f557,
         type: 3}

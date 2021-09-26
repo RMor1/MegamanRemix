@@ -34,7 +34,7 @@ public class ControlV2 : MonoBehaviour
     [SerializeField] bool onCutscene;
 
     [Header("Debuffs")]
-    [SerializeField] bool isSlowed;
+    [SerializeField] public bool isSlowed;
     [SerializeField] private float slowAmountPercent;
     private void OnDrawGizmos()
     {
@@ -185,5 +185,15 @@ public class ControlV2 : MonoBehaviour
             timer = Time.time;
             vida--;
         }
+    }
+    public void slowPlayer(float Duracao)
+    {
+        StartCoroutine(applySlow(Duracao));
+    }
+    private IEnumerator applySlow(float slowDuration)
+    {
+        isSlowed = true;
+        yield return new WaitForSeconds(slowDuration);
+        isSlowed = false;
     }
 }
