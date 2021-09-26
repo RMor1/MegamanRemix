@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class outlineScript : MonoBehaviour
+public class OutlineScript : MonoBehaviour
 {
-    [SerializeField] private bool triggered;
     [SerializeField] private Sprite withoutOutline;
     [SerializeField] private Sprite withOutline;
     private SpriteRenderer spriteRenderer;
@@ -19,5 +18,9 @@ public class outlineScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) spriteRenderer.sprite = withoutOutline;
+    }
+    public void removeOutline()
+    {
+        spriteRenderer.sprite = withoutOutline;
     }
 }

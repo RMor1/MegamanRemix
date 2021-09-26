@@ -6,6 +6,7 @@ public class LevelLoader : MonoBehaviour
 {
     private Animator loadingScreenAnimator;
     [System.NonSerialized] public bool finishedStart;
+    private bool alreadyStarted;
     private void Start()
     {
         loadingScreenAnimator = GameObject.Find("LoadingScreen").GetComponent<Animator>();
@@ -14,10 +15,11 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadLevel(int sceneIndex)
     {
-        StartCoroutine(LoadAsync(sceneIndex));
+        if(!alreadyStarted) StartCoroutine(LoadAsync(sceneIndex));
     }
     IEnumerator LoadAsync(int sceneIndex)
     {
+        alreadyStarted = true;
         loadingScreenAnimator.SetTrigger("loadingstart");
         while(!finishedStart)
         {
@@ -28,8 +30,6 @@ public class LevelLoader : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log(progress);
-
             yield return null;
         }
     }
