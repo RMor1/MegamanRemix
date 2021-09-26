@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 922396682239106712}
   - component: {fileID: 1957784362}
   - component: {fileID: 1957784363}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Aim
   m_TagString: HitBox
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 922396682288281347}
   - component: {fileID: 922396682288281404}
   - component: {fileID: 2094927087}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: PrefabRatoAi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,6 +230,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005260408, y: 0.3}
-  m_Size: {x: 1.1505204, y: 1.1505204}
+  m_Offset: {x: 0.005260408, y: 0.37462807}
+  m_Size: {x: 1.1505204, y: 1.6978035}
   m_Direction: 0

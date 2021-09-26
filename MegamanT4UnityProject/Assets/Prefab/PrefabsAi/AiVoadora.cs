@@ -4,6 +4,9 @@ public class AiVoadora : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float MoveSpeed;
+    [SerializeField] private bool bossFight;
+    [SerializeField] private string moveScriptName;
+    [SerializeField] private bool left2Right;
     [SerializeField] private GameObject Comeco;
     [Range(0, 3)] [SerializeField] public int QuantidadeDeIntermediarios;
     [SerializeField] private GameObject Intermediario1;
@@ -34,6 +37,26 @@ public class AiVoadora : MonoBehaviour
         AiAnimator.SetBool("IsStandby", true);
         Action = -1;
         PosicaoAtual = -1;
+        if (bossFight)
+        {
+            GameObject moveScript = GameObject.Find(moveScriptName);
+            if (left2Right)
+            {
+                Comeco = moveScript.transform.GetChild(0).gameObject;
+                Intermediario1 = moveScript.transform.GetChild(1).gameObject;
+                Intermediario2 = moveScript.transform.GetChild(2).gameObject;
+                Intermediario3 = moveScript.transform.GetChild(3).gameObject;
+                Final = moveScript.transform.GetChild(4).gameObject;
+            }
+            else
+            {
+                Comeco = moveScript.transform.GetChild(4).gameObject;
+                Intermediario1 = moveScript.transform.GetChild(3).gameObject;
+                Intermediario2 = moveScript.transform.GetChild(2).gameObject;
+                Intermediario3 = moveScript.transform.GetChild(1).gameObject;
+                Final = moveScript.transform.GetChild(0).gameObject;
+            }
+        }
         DeltaPosition = Comeco.transform.position - transform.position;
         CorrecaoDeDirecao();
     }

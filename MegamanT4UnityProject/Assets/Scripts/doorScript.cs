@@ -17,10 +17,10 @@ public class doorScript : MonoBehaviour
     }
     private void OnTriggerEnter2D (Collider2D collision)
     {
-        playerTrigger = true;
+        if(collision.CompareTag("Player")) playerTrigger = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        playerTrigger = false;
+        if (collision.CompareTag("Player")) playerTrigger = false;
     }
 }

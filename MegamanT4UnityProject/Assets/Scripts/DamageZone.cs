@@ -29,6 +29,6 @@ public class DamageZone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) player.GetComponent<Control>().Damage();
+        if (collision.CompareTag("Player")) player.GetComponent<ControlV2>().Damage();
     }
 }
