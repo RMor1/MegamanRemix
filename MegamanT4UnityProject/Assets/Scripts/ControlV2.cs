@@ -190,7 +190,7 @@ public class ControlV2 : MonoBehaviour
     {
         StartCoroutine(applySlow(Duracao));
     }
-    private IEnumerator applySlow(float slowDuration)
+    public IEnumerator applySlow(float slowDuration)
     {
         isSlowed = true;
         yield return new WaitForSeconds(slowDuration);
