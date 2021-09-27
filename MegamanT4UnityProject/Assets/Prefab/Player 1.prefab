@@ -3874,7 +3874,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 50179
+      m_Bits: 115715
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4973,16 +4973,18 @@ MonoBehaviour:
   anima: {fileID: 374762441}
   rdb: {fileID: 6207286873201322449}
   fire: {fileID: 6077420035780507231}
+  playerprefab: {fileID: 6238077196419189995}
   MoveSpeed: 20
   JumpForce: 1.14
   ShootCooldown: 0.1
   vida: 5
-  playerprefab: {fileID: 6238077196419189995}
   JumpSpeed: 4.7
   jumpTime: 0.6
   feetPos: {fileID: 927741017}
   checkRadius: 0.3
   onCutscene: 0
+  isSlowed: 0
+  slowAmountPercent: 15
 --- !u!70 &6227428657800655611
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5031,7 +5033,7 @@ GameObject:
   - component: {fileID: 6075837970730719873}
   m_Layer: 9
   m_Name: SubEmitter0
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

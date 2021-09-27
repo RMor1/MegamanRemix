@@ -7,7 +7,8 @@ public class AiAranha : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 sizesAranha;
     private SpriteRenderer spriteRenderer;
-
+    [Header("Atributos")]
+    [SerializeField] private int vida;
     [Header("Movimentação")]
     [SerializeField] private float MoveSpeed;
     private bool attacking;
@@ -142,5 +143,10 @@ public class AiAranha : MonoBehaviour
             spriteRenderer.flipX = true;
             direcao = 1;
         }
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        vida--;
+        if (vida <= 0) Destroy(gameObject);
     }
 }

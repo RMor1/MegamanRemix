@@ -31,7 +31,7 @@ public class AiVoadora : MonoBehaviour
     private GameObject HitBoxAttack;
     void Start()
     {
-        HitBoxAttack = GameObject.Find("DamageHitBox");
+        HitBoxAttack = transform.GetChild(0).gameObject;
         AiAnimator = gameObject.GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
         AiAnimator.SetBool("IsStandby", true);

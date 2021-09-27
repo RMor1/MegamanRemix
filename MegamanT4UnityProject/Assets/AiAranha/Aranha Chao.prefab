@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3415990199367699004}
   - component: {fileID: 3415990199367699000}
   - component: {fileID: 3415990199367699001}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Aranha Chao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9010560a5252ec54bab79abd91a99b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0
+  vida: 3
+  MoveSpeed: 3
   verRange: 1
   AtaqueRange: 5
   shootCooldown: 2

@@ -24,7 +24,7 @@ public class AiAndaRewritten : MonoBehaviour
     void Start()
     {
         LastKnowPosition = new Vector2(0, 0);
-        Aim = GameObject.Find("Aim");
+        Aim = transform.GetChild(0).gameObject;
         lenght = GetComponent<SpriteRenderer>().bounds.size.x;
         height = GetComponent<SpriteRenderer>().bounds.size.y;
         Player = GameObject.FindGameObjectWithTag("Player");

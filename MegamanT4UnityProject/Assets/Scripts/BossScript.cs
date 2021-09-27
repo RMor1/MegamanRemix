@@ -412,12 +412,12 @@ public class BossScript : MonoBehaviour
                 //instantiate morcego 
                 spawnedEnemies[0] = Instantiate(morcegoRight2Left, morcegoTransform[0].position, TetoTransform[0].rotation);
                 //instantiate Aranha chao
-                spawnedEnemies[1] = Instantiate(aranhaChao, portasTransform[0].position, portasTransform[0].rotation);
+                spawnedEnemies[1] = Instantiate(aranhaChao, portasTransform[0].position + new Vector3(0,-portasTransform[0].GetComponent<SpriteRenderer>().bounds.size.y + aranhaChao.GetComponent<SpriteRenderer>().bounds.size.y + 1, 0), portasTransform[0].rotation);
                 yield return new WaitForSeconds(1);
                 //instantiate morcego
                 spawnedEnemies[2] = Instantiate(morcegoLeft2Right, morcegoTransform[1].position, TetoTransform[1].rotation);
                 //instantiate Aranha chao
-                spawnedEnemies[3] = Instantiate(aranhaChao, portasTransform[1].position, portasTransform[1].rotation);
+                spawnedEnemies[3] = Instantiate(aranhaChao, portasTransform[1].position + new Vector3(0,-portasTransform[1].GetComponent<SpriteRenderer>().bounds.size.y + aranhaChao.GetComponent<SpriteRenderer>().bounds.size.y + 1, 0), portasTransform[1].rotation);
                 break;
         }
     }

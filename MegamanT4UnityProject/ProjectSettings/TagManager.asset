@@ -30,7 +30,7 @@ TagManager:
   - Ground
   - NotCollideWPlayer
   - Esteira
-  - 
+  - NotCollidesWithItSelf
   - 
   - 
   - 
