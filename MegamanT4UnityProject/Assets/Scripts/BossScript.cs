@@ -13,7 +13,7 @@ public class BossScript : MonoBehaviour
     private int ChildCount = 0;
     [Header("Movimentação")]
     [SerializeField] private float moveSpeed;
-    [SerializeField] private bool leaveHole;
+    public bool leaveHole;
     private bool SpawnSequence = true;
     private int SpawnAction;
     [Header("Ataque")]
