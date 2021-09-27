@@ -5,8 +5,12 @@ using UnityEngine;
 public class ElevadorScript : MonoBehaviour
 {
     private bool bossCheckCooldown=true;
+    private bool onFinalCutscene;
+    public bool finishedStartLoading;
+    private Animator loadingScreenAnimator;
     public static bool[] geradoresBool = new bool[3];
     private SpriteRenderer[] luzes = new SpriteRenderer[3];
+    private bool triggered;
     [Header("Luzes")]
     [SerializeField] private Sprite lit;
     void Start()
@@ -21,6 +25,7 @@ public class ElevadorScript : MonoBehaviour
             GameObject.Find("RigController").GetComponent<BossScript>().leaveHole = true;
         }
         GetComponent<BoxCollider2D>().enabled = false;
+        loadingScreenAnimator = GameObject.Find("LoadingScreen").GetComponent<Animator>();
     }
     private void Update()
     {
@@ -29,15 +34,42 @@ public class ElevadorScript : MonoBehaviour
             if(GameObject.Find("RigController") == null)
             {
                 GetComponent<BoxCollider2D>().enabled = true;
+                bossCheckCooldown = false;
             }
-            StartCoroutine(bossCheck());
+            else StartCoroutine(bossCheck());
         }
+        if(triggered && Input.GetKeyDown(KeyCode.W))
+        {
+            if(!onFinalCutscene)StartCoroutine(finalCutscene());
+        }
+    }
+    IEnumerator finalCutscene()
+    {
+        loadingScreenAnimator.SetTrigger("loadingstart");
+        onFinalCutscene = true;
+        while(!GameObject.Find("LevelLoader").GetComponent<LevelLoader>().finishedStart)
+        {
+
+            yield return null;
+        }
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(-11.88f, 44.82f, 0);
+        yield return new WaitForSeconds(2);
+        loadingScreenAnimator.SetTrigger("loadingend");
+        onFinalCutscene = false;
     }
     IEnumerator bossCheck()
     {
         bossCheckCooldown = false;
         yield return new WaitForSeconds(0.1f);
         bossCheckCooldown = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        triggered = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggered = false;
     }
     public void litElevatorLight(int lightNumber)
     {
